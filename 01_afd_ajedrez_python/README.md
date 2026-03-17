@@ -4,9 +4,11 @@
 
 Se acepta una cadena con la forma:
 
+```
 \[
 \text{ATOM}\;(\text{espacios opcionales})\;(\rightarrow\ \text{o}\ X)\;(\text{espacios opcionales})\;\text{ATOM}
 \]
+```
 
 Para efectos de la implementación del AFD, se simplificó el ATOM como cualquier secuencia de letras seguida de un dígito opcional (1-8), asegurando la compatibilidad con los ejemplos
 
