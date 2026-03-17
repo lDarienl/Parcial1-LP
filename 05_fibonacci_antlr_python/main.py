@@ -39,6 +39,9 @@ def run(text: str) -> str:
     from fibogrammarVisitor import fibogrammarVisitor  
 
     class Visitor(fibogrammarVisitor):  
+        def visitProg(self, ctx):  # type: ignore[override]
+            return self.visit(ctx.expr())
+
         def visitExpr(self, ctx):  
             n = int(ctx.INT().getText())
             seq = FiboEngine.fibo_upto(n)
