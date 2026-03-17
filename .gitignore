@@ -1,0 +1,45 @@
+## Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+## Virtual environments
+venv/
+.venv/
+env/
+
+## ANTLR generated (Python target)
+*.interp
+*.tokens
+antlr_gen/
+
+## C / Flex / Bison build artifacts
+*.o
+*.out
+*.exe
+*.obj
+*.a
+*.so
+*.dll
+*.dSYM/
+build/
+bin/
+*.c~
+*.h~
+
+## Flex/Bison generated sources (we keep sources in src/, but ignore generated)
+*.tab.c
+*.tab.h
+lex.yy.c
+
+## OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
