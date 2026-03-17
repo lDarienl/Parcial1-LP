@@ -41,14 +41,7 @@ ATOM = ( ( [kq] [bnr]? p? ) | ( [pkqrbn] ) ) [1-8]?
 MOVE = ATOM \s* (->|X) \s* ATOM
 ```
 
-## Ejecutar (WSL)
-
-```bash
-cd Parcial1-LP/01_afd_ajedrez_python
-python3 main.py
-```
-
-## Probar con tus entradas
+## Tests
 
 ```bash
 python3 main.py "p->k4"

@@ -1,4 +1,4 @@
-grammar Fibo;
+grammar fibogrammar;
 
 prog
   : expr EOF

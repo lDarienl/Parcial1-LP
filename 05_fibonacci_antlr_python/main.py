@@ -34,19 +34,19 @@ class FiboEngine:
 
 def run(text: str) -> str:
     _ensure_generated_on_path()
-    from FiboLexer import FiboLexer  # type: ignore
-    from FiboParser import FiboParser  # type: ignore
-    from FiboVisitor import FiboVisitor  # type: ignore
+    from fibogrammarLexer import fibogrammarLexer  
+    from fibogrammarParser import fibogrammarParser  
+    from fibogrammarVisitor import fibogrammarVisitor  
 
-    class Visitor(FiboVisitor):  # type: ignore
-        def visitExpr(self, ctx):  # noqa: N802
+    class Visitor(fibogrammarVisitor):  
+        def visitExpr(self, ctx):  
             n = int(ctx.INT().getText())
             seq = FiboEngine.fibo_upto(n)
             return ", ".join(str(x) for x in seq)
 
-    lexer = FiboLexer(InputStream(text))
+    lexer = fibogrammarLexer(InputStream(text))
     stream = CommonTokenStream(lexer)
-    parser = FiboParser(stream)
+    parser = fibogrammarParser(stream)
     tree = parser.prog()
     out = Visitor().visit(tree)
     return str(out)
@@ -65,7 +65,7 @@ def main(argv: list[str]) -> int:
         print(
             "Error: no encuentro los archivos generados en ./antlr_gen.\n"
             "Ejecuta:\n"
-            "  antlr4 -Dlanguage=Python3 -visitor -no-listener grammar/Fibo.g4 -o antlr_gen",
+            "  antlr4 -Dlanguage=Python3 -visitor -no-listener grammar/fibogrammar.g4 -o antlr_gen",
             file=sys.stderr,
         )
         return 2
