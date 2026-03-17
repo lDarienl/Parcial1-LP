@@ -14,14 +14,27 @@ x_{n+1} = \frac{1}{2}\left(x_n + \frac{a}{x_n}\right)
 
 ## Archivo de entrada (ejemplo)
 
-En `input.txt`:
+En `pruebas.txt`:
 
 ```
+sqrt(4)
 sqrt(144)
 sqrt(2)
+sqrt(0)
+sqrt(0.25)
 3 + sqrt(9) * 2
-10 / (2 + 3)
+(10 + 5) * (20 / sqrt(25))
+-5 + sqrt(100)
+sqrt(-4)
+10 / 0
+5 + @
+sqrt(16
+
 ```
 
-## Probar rápido
-
+## Manejo de Errores
+La calculadora detecta y reporta:
+- División por cero.
+- Raíces de números negativos.
+- Caracteres no reconocidos (Léxico).
+- Errores de estructura/paréntesis (Sintáctico).
