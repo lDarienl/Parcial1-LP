@@ -8,7 +8,7 @@ from antlr4 import CommonTokenStream, InputStream
 
 
 def _ensure_generated_on_path() -> None:
-    gen_dir = os.path.join(os.path.dirname(__file__), "antlr_gen")
+    gen_dir = os.path.join(os.path.dirname(__file__), "antlr_gen", "grammar")
     if gen_dir not in sys.path:
         sys.path.insert(0, gen_dir)
 

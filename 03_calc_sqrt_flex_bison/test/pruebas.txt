@@ -1,0 +1,12 @@
+sqrt(4)
+sqrt(144)
+sqrt(2)
+sqrt(0)
+sqrt(0.25)
+3 + sqrt(9) * 2
+(10 + 5) * (20 / sqrt(25))
+-5 + sqrt(100)
+sqrt(-4)
+10 / 0
+5 + @
+sqrt(16
